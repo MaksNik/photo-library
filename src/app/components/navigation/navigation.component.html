@@ -1,0 +1,15 @@
+<nav mat-tab-nav-bar [tabPanel]="tabPanel" [backgroundColor]="'primary'">
+  <a mat-tab-link
+     routerLink=""
+     routerLinkActive="active"
+     ariaCurrentWhenActive="page"
+     (click)="activeRoute = ''"
+     [active]="activeRoute == ''"> PHOTOS </a>
+  <a mat-tab-link
+     routerLink="favorites"
+     routerLinkActive="active"
+     ariaCurrentWhenActive="page"
+     (click)="activeRoute = 'favorites'"
+     [active]="activeRoute?.includes('favorites')"> FAVORITES </a>
+</nav>
+<mat-tab-nav-panel #tabPanel></mat-tab-nav-panel>

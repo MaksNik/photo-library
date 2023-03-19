@@ -1,0 +1,6 @@
+<pl-photos-list
+  [images]="favoriteImages$ | async"
+  [captionText]="'Click to see fullscreen image'"
+  [favoritesMode]="true"
+  (imageClicked)="showDetails($event)"
+></pl-photos-list>
