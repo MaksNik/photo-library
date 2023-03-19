@@ -1,0 +1,15 @@
+<div class="single-favorite-image" *ngIf="imgSrc$ | async">
+  <pl-photo
+    [imageSrc]="imgSrc$ | async"
+    [largeImageSize]="true"
+    [favoritesMode]="true"
+    (click)="goToFavorites()"
+    title="Click on the image to return to the favorites page"
+  ></pl-photo>
+  <button class="remove-button"
+          mat-raised-button
+          color="primary"
+          (click)="removeFromFavorites()"
+  >Remove from favorites</button>
+</div>
+<pl-not-found *ngIf="!(imgSrc$ | async)"></pl-not-found>
