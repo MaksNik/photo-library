@@ -1,9 +1,0 @@
-<mat-card class="image"
-          [ngClass]="{
-          'small': !largeImageSize,
-          'large': largeImageSize,
-          'added': !favoritesMode && addedToFavorites
-          }">
-  <img mat-card-image [src]="imageSrc" />
-  <mat-card-content *ngIf="captionText">{{captionText}}</mat-card-content>
-</mat-card>
